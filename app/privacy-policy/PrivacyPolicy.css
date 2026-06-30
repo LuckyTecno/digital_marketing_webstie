@@ -1,0 +1,100 @@
+.legal-page { background: var(--bg); }
+
+.legal-content {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.legal-toc {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-4));
+  background: var(--light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+}
+
+.legal-toc h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-toc ol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: decimal;
+  padding-left: var(--space-5);
+}
+
+.legal-toc a {
+  font-size: var(--text-sm);
+  color: var(--gray);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.legal-toc a:hover { color: var(--primary); }
+
+.legal-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.legal-body section { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.legal-body h2 {
+  font-size: var(--text-2xl);
+  color: var(--dark);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-body p { color: var(--gray); line-height: 1.8; font-size: var(--text-base); }
+
+.legal-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.legal-body ul li {
+  color: var(--gray);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.legal-body ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.legal-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--light);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+}
+
+.legal-contact strong { font-size: var(--text-lg); color: var(--dark); }
+.legal-contact span, .legal-contact a { font-size: var(--text-sm); color: var(--gray); text-decoration: none; }
+.legal-contact a:hover { color: var(--primary); }
+
+@media (max-width: 900px) {
+  .legal-content { grid-template-columns: 1fr; }
+  .legal-toc { position: static; }
+}

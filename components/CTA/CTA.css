@@ -1,0 +1,212 @@
+.cta-section {
+  position: relative;
+  padding: var(--space-24) 0;
+  background: var(--gradient-dark);
+  overflow: hidden;
+}
+
+.cta-bg-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.cta-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.cta-shape-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary);
+  opacity: 0.1;
+  top: -200px;
+  right: -100px;
+}
+
+.cta-shape-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent);
+  opacity: 0.08;
+  bottom: -150px;
+  left: -100px;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.cta-content {
+  color: #fff;
+}
+
+.cta-badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: var(--warning)20;
+  color: var(--warning);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--warning)40;
+  margin-bottom: var(--space-4);
+}
+
+.cta-content h2 {
+  color: #fff;
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.cta-content h2 span {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+}
+
+.cta-actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background: var(--gradient-primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  font-size: var(--text-base);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-primary);
+}
+
+.cta-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(37, 99, 235, 0.5);
+  color: #fff;
+}
+
+.cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: var(--text-base);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all var(--transition-base);
+}
+
+.cta-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.cta-trust {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.cta-trust span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+}
+
+/* CTA Card */
+.cta-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  text-align: center;
+}
+
+.cta-card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+}
+
+.cta-card h3 {
+  color: #fff;
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.cta-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+}
+
+.cta-card-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--space-4);
+}
+
+.cta-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.cta-stat strong {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-stat span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 900px) {
+  .cta-inner {
+    grid-template-columns: 1fr;
+  }
+  .cta-visual {
+    display: none;
+  }
+}

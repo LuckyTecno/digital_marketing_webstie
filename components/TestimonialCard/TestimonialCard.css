@@ -1,0 +1,90 @@
+.testimonial-card {
+  background: var(--bg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: box-shadow var(--transition-base);
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.tc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tc-quote {
+  color: var(--primary);
+  font-size: var(--text-2xl);
+  opacity: 0.3;
+}
+
+.tc-stars {
+  display: flex;
+  gap: 2px;
+  color: var(--warning);
+  font-size: var(--text-sm);
+}
+
+.tc-text {
+  color: var(--dark-3);
+  font-size: var(--text-base);
+  line-height: 1.8;
+  flex: 1;
+  font-style: italic;
+}
+
+.tc-result {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--success)15;
+  color: var(--success);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 1px solid var(--success)30;
+  width: fit-content;
+}
+
+.tc-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.tc-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary)30;
+}
+
+.tc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tc-info strong {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--dark);
+}
+
+.tc-info span {
+  font-size: var(--text-xs);
+  color: var(--gray);
+}
