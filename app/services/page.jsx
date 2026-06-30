@@ -9,6 +9,13 @@ import CTA from '../../components/CTA/CTA';
 import { services } from '../../lib/data';
 import './Services.css';
 
+const processSteps = [
+  { step: '01', icon: '🔍', title: 'Discovery & Audit', desc: 'We dive deep into your business, competitors, and market to uncover growth opportunities and identify gaps.' },
+  { step: '02', icon: '📋', title: 'Strategy Development', desc: 'We build a custom data-driven strategy tailored to your specific goals, audience, and budget.' },
+  { step: '03', icon: '🚀', title: 'Execution & Launch', desc: 'Our team executes campaigns with precision, creativity, and relentless attention to detail.' },
+  { step: '04', icon: '📈', title: 'Optimize & Scale', desc: 'We continuously analyze, test, and optimize to maximize ROI and scale what works best.' },
+];
+
 const categories = [
   { id: 'all', label: 'All Services' },
   { id: 'organic', label: 'Organic Growth' },
@@ -89,6 +96,35 @@ export default function Services() {
                     Learn More <FiArrowRight />
                   </Link>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section services-process bg-light">
+        <div className="container">
+          <SectionTitle
+            badge="How We Work"
+            title="Our Proven"
+            highlight="4-Step Process"
+            description="We follow a systematic process that delivers consistent, measurable results for every client we work with."
+          />
+          <div className="process-grid">
+            {processSteps.map((step, i) => (
+              <motion.div
+                key={i}
+                className="process-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="process-number">{step.step}</div>
+                <div className="process-icon">{step.icon}</div>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+                {i < processSteps.length - 1 && <div className="process-arrow" />}
               </motion.div>
             ))}
           </div>

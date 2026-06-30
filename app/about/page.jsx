@@ -19,6 +19,15 @@ const milestones = [
   { year: '2025', title: '480+ Clients', desc: 'Serving 480+ businesses and generating $50M+ in client revenue.' },
 ];
 
+const whyUs = [
+  { icon: '🎯', title: 'Data-Driven Decisions', desc: 'Every strategy is backed by deep data analysis and performance metrics, not guesswork.' },
+  { icon: '🏆', title: 'Proven Track Record', desc: '480+ clients served, $50M+ in revenue generated for businesses like yours.' },
+  { icon: '👥', title: 'Expert Team', desc: 'Certified specialists in SEO, PPC, Social Media, and Content Marketing.' },
+  { icon: '📊', title: 'Full Transparency', desc: 'Real-time dashboards and weekly reports keep you informed at every step.' },
+  { icon: '⚡', title: 'Fast Results', desc: 'See measurable improvements within the first 30 days of working together.' },
+  { icon: '🤝', title: 'True Partnership', desc: 'We treat your business like our own and are genuinely invested in your success.' },
+];
+
 const values = [
   { icon: <FiTarget />, title: 'Results-First', desc: 'We obsess over outcomes, not activities. Every campaign is measured against real business goals.' },
   { icon: <FiUsers />, title: 'True Partnership', desc: 'We treat every client like a long-term partner, not just a contract.' },
@@ -98,6 +107,34 @@ export default function About() {
                 <div className="value-icon">{v.icon}</div>
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section about-why">
+        <div className="container">
+          <SectionTitle
+            badge="Why NexaDigital"
+            title="Why 480+ Companies Choose"
+            highlight="Us Over Others"
+            description="We combine deep expertise with a genuine passion for client success. Here is what sets us apart from other agencies."
+          />
+          <div className="why-us-grid">
+            {whyUs.map((item, i) => (
+              <motion.div
+                key={i}
+                className="why-us-card"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="why-us-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </motion.div>
             ))}
           </div>
